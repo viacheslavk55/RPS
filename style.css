@@ -34,3 +34,23 @@
   .text {
     margin: 0 1.5em
   }
+  body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .imgresize {
+    width: calc(40% + 15rem);
+  }
+  
+@media (max-width: 768px) {
+  .mobileres {
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+}
+.mobileres {
+  text-align: center;
+}
