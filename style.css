@@ -45,7 +45,7 @@
   
 @media (max-width: 768px) {
   .mobileres {
-    margin: 0;
+  margin: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -54,3 +54,12 @@
 .mobileres {
   text-align: center;
 }
+.annapurna-sil-bold {
+  font-family: "Annapurna SIL", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.hov:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+ }
