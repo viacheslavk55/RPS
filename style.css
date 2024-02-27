@@ -4,7 +4,7 @@
     font-style: normal;
   }
   .cssbuttons-io-button {
-    background: #a370f0;
+    background: #000000;
     color: white;
     font-family: inherit;
     padding: 0.35em;
@@ -16,13 +16,12 @@
     letter-spacing: 0.05em;
     display: flex;
     align-items: center;
-    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    box-shadow: inset 0 0 1.6em -0.6em #7e7e7e;
     overflow: hidden;
     position: relative;
     height: 2.8em;
     padding-right: 3.3em;
     cursor: pointer;
-    left: 50%;
   }
   
   .cssbuttons-io-button .icon {
@@ -35,7 +34,7 @@
     height: 2.2em;
     width: 2.2em;
     border-radius: 0.7em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #000000;
     right: 0.3em;
     transition: all 0.3s;
   }
@@ -47,7 +46,7 @@
   .cssbuttons-io-button .icon svg {
     width: 1.1em;
     transition: transform 0.3s;
-    color: #7b52b9;
+    color: #000000;
   }
   
   .cssbuttons-io-button:hover .icon svg {
@@ -64,7 +63,7 @@
     margin: 0;
   }
   .imgresize {
-    width: calc(7rem + 4vw);
+    width: calc(6.2rem + 4vw);
   }
   .imgresizes {
     width: calc(40% + 15rem);

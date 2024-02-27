@@ -1,152 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>RPS Game</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link rel="stylesheet" href="https://use.typekit.net/pal0hiu.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&display=swap" rel="stylesheet">
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <title>RPS Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/pal0hiu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body>
-        <div class="container">
-           <header class="top p-4 text-center protest-riot-regular">
-            <h1>Rock, Paper, Scissors Game</h1>
-            </header>
+  <body>
+    <div class="container">
+      <header class="top p-4 text-center protest-riot-regular">
+        <h1>Rock, Paper, Scissors Game</h1>
+      </header>
 
-            <div class="row mt-3 mb-3">
-              <div class="col-12 text-center">
-                <h1 class="annapurna-sil-bold">Score: 0 - 0</h1>
-              </div>
-            </div>
+      <div class="row mt-4 mb-3">
+        <div class="col-12 text-center">
+          <h1 class="annapurna-sil-bold">Score: 0 - 0</h1>
+        </div>
+      </div>
 
-            <div class="row mt-4 text-center">
-              <div class="col-6">
-                <h2>Players choice:</h2>
-                <div class="btn-group" role="group">
-                  <button type="button" class="btn hov p-0">
-                    <img src="images/rp.png" class="ires">
-                  </button>
-                  <button type="button" class="btn hov p-0">
-                    <img src="images/pp.png" class="ires">
-                  </button>
-                  <button type="button" class="btn hov p-0">
-                    <img src="images/sp.png" class="ires">
-                  </button>
-                </div>
-              </div>
-              <div class="col-6">
-                <h2>Computers choice:</h2>
-              </div>
-            </div>
-            
-            <div class="row text-center mt-4">
-              <div class="col-4">
-                <img src="images/start.png" class="imgresize">
-              </div>
-              <div class="col-4">
-                <div style="position: absolute; top: 50%;">
-                  <h2 class="tr">Welcome Player!</h2>
-                </div>
-                
-              </div>
-              <div class="col-4">
-                <img src="images/start.png" class="imgresize">
-              </div>
-            </div>
-            
-            <div class="text-center mt-4">
-              <button class="cssbuttons-io-button protest-riot-regular" onclick="enterName()">
-                Click To Start
-                <div class="icon">
-                  <svg
-                    height="24"
-                    width="24"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M0 0h24v24H0z" fill="none"></path>
-                    <path
-                      d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-            </div>
-            
-            </div>
-             <!-- Footer starts -->
+      <div class="row mt-5 text-center">
+        <div class="col-6">
+          <h2 class="pb-4">Players choice:</h2>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn hov p-0">
+              <img src="images/rp.png" class="ires" />
+            </button>
+            <button type="button" class="btn hov p-0">
+              <img src="images/pp.png" class="ires" />
+            </button>
+            <button type="button" class="btn hov p-0">
+              <img src="images/sp.png" class="ires" />
+            </button>
+          </div>
+        </div>
+        <div class="col-6">
+          <h2>Computers choice:</h2>
+        </div>
+      </div>
 
-            <div class="container-fluid p-0" style="position: absolute; bottom: 0;"> 
-                 <footer class="text-center text-white">
-            <!-- Grid container -->
-      <div>
-        <div class="container p-4 pb-0">
+      <div class="row text-center mt-5 pb-5">
+        <div class="col-4">
+          <img src="images/start.png" class="imgresize" />
+        </div>
+        <div
+          class="col-4"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <p class="tr m-auto protest-riot-regular">Welcome Player!</p>
+        </div>
+        <div class="col-4">
+          <img src="images/start.png" class="imgresize" />
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <button
+          class="cssbuttons-io-button protest-riot-regular m-auto"
+          onclick="enterName()"
+        >
+          Click To Start
+          <div class="icon">
+            <svg
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+    <!-- Footer starts -->
+
+    <div class="container-fluid p-0" style="position: absolute; bottom: 0">
+      <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div>
           <!-- Section: Social media -->
-          <section class="mb-4">
+          <section
+            class="pb-3 pt-3"
+            style="background-color: rgb(230, 230, 230)"
+          >
             <div class="row m-auto">
               <div class="col-12 col-lg-6">
-              <a class="btn text-white btn-floating m-1" style="background-color: #333333;"
-              href="https://github.com/viacheslavk55" target="_blank" role="button"><i class="fab fa-github m-2"></i><span class="icon">viacheslavk55</span></a>
-            </div>
-            <div class="col-12 col-lg-6">
-              <a class="btn text-white btn-floating m-1" style="background-color: #333333;"
-              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvqrzFztMdNqFMQnjrhSKgkdgTLbttWQmRLdJFVdrPgtdZDlWSXzMgFpVTJdVCjJCKThGq" target="_blank" role="button"><i class="fa-regular fa-envelope m-2"></i><span class="icon">525vkostenko@frhsd.com</span></a>
-            </div>
+                <a
+                  class="btn text-white btn-floating m-1"
+                  style="background-color: #333333"
+                  href="https://github.com/viacheslavk55"
+                  target="_blank"
+                  role="button"
+                  ><i class="fab fa-github m-2"></i
+                  ><span class="icon">viacheslavk55</span></a
+                >
+              </div>
+              <div class="col-12 col-lg-6">
+                <a
+                  class="btn text-white btn-floating m-1"
+                  style="background-color: #333333"
+                  href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvqrzFztMdNqFMQnjrhSKgkdgTLbttWQmRLdJFVdrPgtdZDlWSXzMgFpVTJdVCjJCKThGq"
+                  target="_blank"
+                  role="button"
+                  ><i class="fa-regular fa-envelope m-2"></i
+                  ><span class="icon">525vkostenko@frhsd.com</span></a
+                >
+              </div>
             </div>
           </section>
           <!-- Section: Social media -->
+          <!-- Grid container -->
         </div>
-        <!-- Grid container -->
-      </div>
         <!-- Copyright -->
-        <div class="text-center p-3 text-dark fw-bold" style="background-color: rgb(243, 243, 243);">
+        <div
+          class="text-center p-3 text-dark fw-bold"
+          style="background-color: rgb(202, 202, 202)"
+        >
           © 2024 Copyright:
-          <a class="text-dark fw-bold" href="https://www.bing.com/search?EID=MBHSC&form=BGGCDF&pc=BG00&q=viacheslav+kostenko" target="_blank">viacheslav.com</a>
+          <a
+            class="text-dark fw-bold"
+            href="https://www.bing.com/search?EID=MBHSC&form=BGGCDF&pc=BG00&q=viacheslav+kostenko"
+            target="_blank"
+            >viacheslav.com</a
+          >
         </div>
         <!-- Copyright -->
       </footer>
-            </div>
+    </div>
 
-   
-      <!-- Footer ENDS -->
+    <!-- Footer ENDS -->
 
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
 
-            <!-- Bootstrap JavaScript Libraries -->
-            <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-            ></script>
-
-            <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-            ></script>
-            <script src="script.js"></script> 
-        
-        
-    </body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
