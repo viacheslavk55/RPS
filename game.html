@@ -54,14 +54,14 @@
         <div class="col-6">
           <h2 class="pb-4" id="choiceText">Players choice:</h2>
           <div class="btn-group" role="group">
-            <button type="button" class="btn hov p-0">
-              <img src="images/rp.png" class="ires" />
+            <button type="button" class="btn hov p-0" onclick="computerChoice(), rock(), score()">
+              <img src="images/rp.png" class="ires" id="rock"/>
             </button>
-            <button type="button" class="btn hov p-0">
-              <img src="images/pp.png" class="ires" />
+            <button type="button" class="btn hov p-0" onclick="computerChoice(), paper(), score()">
+              <img src="images/pp.png" class="ires" id="paper"/>
             </button>
-            <button type="button" class="btn hov p-0">
-              <img src="images/sp.png" class="ires" />
+            <button type="button" class="btn hov p-0" onclick="computerChoice(), scissors(), score()">
+              <img src="images/sp.png" class="ires" id="scissors"/>
             </button>
           </div>
         </div>
@@ -70,9 +70,9 @@
         </div>
       </div>
 
-      <div class="row text-center mt-5 pb-5">
+      <div class="row text-center mt-5 pb-lg-5 ">
         <div class="col-4">
-          <img src="images/start.png" class="imgresize" />
+          <img src="images/start.png" class="imgresize" id="pc"/>
         </div>
         <div
           class="col-4"
@@ -81,14 +81,14 @@
           <p class="tr m-auto protest-riot-regular" id="message">Welcome Player!</p>
         </div>
         <div class="col-4">
-          <img src="images/start.png" class="imgresize" />
+          <img src="images/start.png" class="imgresize" id="cc"/>
         </div>
       </div>
 
       <div class="text-center mt-5">
         <button
           class="cssbuttons-io-button protest-riot-regular m-auto"
-          onclick="enterName()"
+          onclick="enterName()" id="replacee"
         >
           Click To Start
           <div class="icon">
@@ -106,6 +106,22 @@
             </svg>
           </div>
         </button>
+        <button class="a d-none" id="replacee2" onclick="reset()">
+          <span class="span-mother">
+            <span>R</span>
+            <span>e</span>
+            <span>s</span>
+            <span>e</span>
+            <span>t</span>
+          </span>
+          <span class="span-mother2">
+            <span>R</span>
+            <span>e</span>
+            <span>s</span>
+            <span>e</span>
+            <span>t</span>
+          </span>
+        </button>        
       </div>
     </div>
     <!-- Footer starts -->
