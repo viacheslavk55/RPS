@@ -1,3 +1,4 @@
+let isRockCalled = false
 function goToGame() {
     window.location.href = "game.html"
 }
@@ -31,9 +32,11 @@ function computerChoice() {
         document.getElementById('cc').src = 'images/sb.png'
     }
 }
+
 function rock() {
     document.getElementById('pc').removeAttribute('src')
     document.getElementById('pc').src = 'images/rp.png'
+    isRockCalled = true
 }
 function paper() {
     document.getElementById('pc').removeAttribute('src')
@@ -43,11 +46,9 @@ function scissors() {
     document.getElementById('pc').removeAttribute('src')
     document.getElementById('pc').src = 'images/sp.png'
 }
-
 function score() {
-    let pc = document.getElementById('pc')
-    if ((pc.src.endsWith('rp.png')) && (randomNumber === 1)) {
-        let tieChange = document.getElementById('message');
+    if (isRockCalled) {
+        let tieChange = document.getElementById('message')
         tieChange.innerHTML = 'its working'
     }
         
