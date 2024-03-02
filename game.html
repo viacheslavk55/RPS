@@ -41,12 +41,12 @@
   <body>
     <div class="container">
       <header class="top p-4 text-center protest-riot-regular">
-        <h1>Rock, Paper, Scissors Game</h1>
+        <h1>Rock, Paper, Scissors First To 5</h1>
       </header>
 
       <div class="row mt-4 mb-3">
         <div class="col-12 text-center">
-          <h1 class="annapurna-sil-bold">Score: 0 - 0</h1>
+          <h1 class="annapurna-sil-bold">Score: <span id="player">0</span> - <span id="comp">0</span></h1>
         </div>
       </div>
 
@@ -54,13 +54,13 @@
         <div class="col-6">
           <h2 class="pb-4" id="choiceText">Players choice:</h2>
           <div class="btn-group" role="group">
-            <button type="button" class="btn hov p-0" onclick="computerChoice(), rock(), score()">
+            <button type="button" class="btn hov p-0" onclick="computerChoice(), rock(), score()" id="bute">
               <img src="images/rp.png" class="ires" id="rock"/>
             </button>
-            <button type="button" class="btn hov p-0" onclick="computerChoice(), paper(), score()">
+            <button type="button" class="btn hov p-0" onclick="computerChoice(), paper(), score()" id="bute2">
               <img src="images/pp.png" class="ires" id="paper"/>
             </button>
-            <button type="button" class="btn hov p-0" onclick="computerChoice(), scissors(), score()">
+            <button type="button" class="btn hov p-0" onclick="computerChoice(), scissors(), score()" id="bute3">
               <img src="images/sp.png" class="ires" id="scissors"/>
             </button>
           </div>
